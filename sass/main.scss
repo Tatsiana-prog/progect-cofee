@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+//Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+// Components
+@import "components/button";
+@import "components/elements";
+@import "components/logo";
+@import "components/slider";
+
+// Base
+@import "base/reset";
+@import "base/typography";
+
+
+// layout
+@import "layout/header";
+@import "layout/section-home";
+@import "layout/section-about";
+@import "layout/section-menu";
+@import "layout/section-reviews";
+@import "layout/section-booking";
+@import "layout/footer";
+
+
+
+
+
+
+
+
+
+
+
+
+

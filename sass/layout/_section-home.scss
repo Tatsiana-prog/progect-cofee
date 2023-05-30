@@ -1,0 +1,120 @@
+.home{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 12rem;
+    background: url(../image/home/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    vertical-align:bottom;
+    & .row{
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:1.5rem;
+        text-align: left;
+    }
+    & .image-slider {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+    }    
+}
+
+
+.home .row {
+    max-width: 160rem;
+    padding: 0 10.3rem;    
+    //*mobile
+    @media (max-width: 767px) {
+        padding: 0 3rem;
+    }
+    & .content {
+    flex:1 1 42rem;
+    }
+    & .image{
+        flex:1 1 42rem;
+        padding-top: 10rem;
+        text-align: center;       
+    }
+}
+.home .content {
+    flex:1 1 42rem;
+    //*tablet big
+    @media (max-width: 1199px) {
+        flex:1 1 25rem;
+        text-align: center;
+    }
+}
+
+.home .row .image img{  
+    height: 55rem;
+    animation: float 4s linear infinite;
+    //*tablet big
+    @media (max-width: 1199px) {
+        height: 45rem;
+        margin-right: 0;
+        margin-left: auto; 
+    }
+}
+.home .row .image {
+    position: relative;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-7rem);
+    }
+}
+
+.home .row .content h1{
+    font-size: 6.5rem;
+    color:$color-add;
+    text-transform: uppercase;    
+}
+
+.home .image-slider img{
+    height:12rem;
+    cursor: pointer;  
+}
+
+.home .image-slider {
+    position: relative;
+}
+.home .image-slider::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    background: url(../image/arow.png) no-repeat;
+    background-size: cover; 
+    background-position: center;   
+    top: -100%;   
+    left: 45%;
+    //tablet big
+    @media (max-width: 1199px) {
+        left: 38%;
+    }
+    //*tablet small
+    @media (max-width: 991px) {
+        width: 10rem;
+        height: 10rem;
+        left: 35%;
+    }
+    //*mobile xs
+    @media (max-width: 575px) {       
+        display: none;
+    }       
+}
+    
+
+.home .image-slider img:hover{
+    transform: translateY(-2rem);
+}
